@@ -42,11 +42,11 @@ A Grain represents an element of video, audio or data that is associated with a 
 
 - A **VideoGrain** has a Grain Payload containing video sample data.
 
-  In NMOS specifications a VideoGrain shall have a Grain Payload corresponding to a **single, complete, frame of video**.
+  In NMOS specifications a VideoGrain shall have a Grain Payload corresponding to a **single, complete, represenation of a frame of video**.
 
   *Note: This applies to Grains with all types of video payloads, including those using GOP-based compression.*
 
-  *Note: This means that both fields of an interlaced frame have the same OriginTimeStamp and SyncTimeStamp/. See also the interlace_mode parameter of VideoFlow.*
+  *Note: This means that both fields of an interlaced frame have the same OriginTimeStamp and SyncTimeStamp.*
 
 - An **AudioGrain** has a Grain Payload containing audio sample data from one or more audio channels.
 
@@ -85,7 +85,6 @@ Resources shall have the following attributes:
 Resources may have the following attributes:
 
 - **tags**: Text-based tags providing information about the resource, to enable categorization and filtering based on user-supplied values.
-- **caps**: Capabilities of the Resource. Usage of these is not yet defined.
 
 ## Flow
 
@@ -115,7 +114,7 @@ A Source represents the primary origin of a Flow, or a set of Flows that contain
 Sources may be one of following types:
 
 - **VideoSource**, origin of VideoFlow(s)
-- **AudioSource**, origin of AudeoFlow(s)
+- **AudioSource**, origin of AudioFlow(s)
 - **DataSource**, origin of DataFlow(s)
 
 Sources shall have the following attributes in addition to those specified by the Resource base class:
