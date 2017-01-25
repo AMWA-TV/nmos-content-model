@@ -3,7 +3,7 @@
 
 NMOS Specifications shall be consistent with the logical content model represented by the following UML class diagram, and defined in this document.
 
-![Content Model](images/Content.png)
+![Content Model](images/Content-1.1.png)
 
 The elements of this model are abstract, and other NMOS Specifications define how these map into interfaces, for example to convey in-stream identity and timing information in an RTP stream.
 
