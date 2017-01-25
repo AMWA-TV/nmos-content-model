@@ -85,7 +85,7 @@ An Resource is a uniquely identifiable and addressable element of a system that 
 
 Resources shall have the following attributes:
 
-- **id**: a Univerally Unique IDentifier (UUID) as per RFC 4122.
+- **id**: a Universally Unique IDentifier (UUID) as per RFC 4122.
 - **version**: a TimeStamp indicating when an attribute of the Resource last changed.
 - **label**: a short string providing a human-readable identifying for the Resource. Does not have to be unique.
 - **description**: a longer string providing a description of the Resource.
@@ -108,7 +108,7 @@ Flows shall have the following attributes in addition to those specified by the 
 
 - **source_id**: the UUID identifying the Source that is the logical origin of the Flow.
 - **parents**: UUIDs referencing all of the Flows that were brought together to create this Flow, for example as a result of a vision mixing operation.
-- **format**: a URI starting with "urn:x-nmos:format:", followed by "video", "audio", "data", or "mux", according to to the type of Flow.  This may be followed by a suffix indicating a more specific type, e.g. "urn:x-nmos:format:video.raw".
+- **format**: a URI starting with "urn:x-nmos:format:", followed by "video", "audio", "data", or "mux", according to the type of Flow.  This may be followed by a suffix indicating a more specific type, e.g. "urn:x-nmos:format:video.raw".
 
 Flows may have the following optional attributes:
 
@@ -133,7 +133,7 @@ Sources may be one of following types:
 Sources shall have the following attributes in addition to those specified by the Resource base class:
 
 - **parents**, UUIDs referencing all of the Sources whose Flows were brought together (see Flow's parents attribute).
-- **format**: a URI starting with "urn:x-nmos:format:", followed by "video", "audio", "data", or "mux", according to to the type of Source.
+- **format**: a URI starting with "urn:x-nmos:format:", followed by "video", "audio", "data", or "mux", according to the type of Source.
 
 Sources may have the following optional attributes:
 
