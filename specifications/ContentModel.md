@@ -12,14 +12,14 @@ This model is based on the data model documented in JT-NM RA 1.0, with a number 
 - Only elements from the model that are directly about content in NMOS specifications are included (so Node, Device, Sender, Receiver are not included).
 - Currently, "grouping" elements such as SourceGroup and Rendition are not included.
 - The Content element, and related elements, are only informative in the JT-NM RA 1.0 data model and are not included.
-- NMOS specifications are constrained to use a nanosecond TimeBase and PTP/SMPTE Epoch.
-- NMOS specifications constrain a video Grains to correspond to a frame.
+- NMOS specifications are currently constrained to use a nanosecond TimeBase and PTP/SMPTE Epoch.
+- NMOS specifications currently constrain a video Grain to correspond to a frame.
 - A Grain has exactly two TimeStamps (Origin and Sync).
 - Various attributes are defined that are not in the scope of the JT-NM RA.
 - Some attribute values with URI type are constrained to have a "urn:x-nmos:" prefix.
 
 ## Clock
-A Clock is a network component providing a ubiquitous time reference.  It may be **traceable**, meaning it is synchronized to International Atomic Time (TAI); a PTP Clock is traceable.
+A Clock is a network component providing a ubiquitous time reference.  It may be **traceable**, meaning it is synchronized to International Atomic Time (TAI), for example a GPS-locked PTP clock.
 
 ## Epoch
 An Epoch specifies the time that corresponds to the zero value of a Clock.
@@ -108,7 +108,7 @@ Flows shall have the following attributes in addition to those specified by the 
 
 - **source_id**: the UUID identifying the Source that is the logical origin of the Flow.
 - **parents**: UUIDs referencing all of the Flows that were brought together to create this Flow, for example as a result of a vision mixing operation.
-- **format**: a URI starting with "urn:x-nmos:format:", followed by "video", "audio", "data", or "mux", according to the type of Flow.  This may be followed by a suffix indicating a more specific type, e.g. "urn:x-nmos:format:video.raw".
+- **format**: a URI starting with "urn:x-nmos:format:", followed by "video", "audio", "data", or "mux", according to the type of Flow.
 
 Flows may have the following optional attributes:
 
